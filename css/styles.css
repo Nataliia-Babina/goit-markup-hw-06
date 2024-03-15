@@ -609,7 +609,6 @@ display: none;
     border-top: none;
 }
 
-
 @media screen and (min-width: 768px) {
     .category {
         width: 356px;
@@ -680,7 +679,6 @@ display: none;
     font-size: 16px;
     line-height: 1.5;
 }
-
 
 /* =========== /Portfolio Section styles =========== */
 
@@ -794,7 +792,6 @@ display: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 .social-media-link-color {
     display: flex;
     justify-content: center;
@@ -816,7 +813,6 @@ display: none;
 .social-media-link-color:focus {
     background-color: #31d0aa;
 }
-
 
 .menu-portfolio-item:hover{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -1124,7 +1120,6 @@ display: none;
 }
 
 .review-form-message::placeholder {
-
     color: rgba(46, 47, 66, 0.4);
 }
 
@@ -1198,7 +1193,7 @@ display: none;
     .privacy-box {
         flex-direction: column;
     }
-
+}
 /* =========== /Rewiew form styles =========== */
 
 /* =========== Footer subscribe styles =========== */
