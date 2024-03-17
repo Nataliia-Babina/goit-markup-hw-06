@@ -32,13 +32,13 @@ img {
 
 @media screen and (min-width: 768px) {
 .container {
-    max-width: 768px;
+    min-width: 768px;
           }
 }
 
 @media screen and (min-width:1158px) {
 .container {
-    max-width: 1158px;
+    min-width: 1158px;
     padding: 0 15px;
     }
 }
@@ -235,11 +235,14 @@ img {
 /* =========== /Page Header styles =========== */
 
 /* =========== Business Section styles =========== */
-
+.section-blog {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
 .business-contanier {
     
     display: block;
-    padding: 96px 0;
+    
 }
 .business {
     background-color: #2e2f42;
@@ -359,10 +362,6 @@ img {
 /* =========== /Business Section styles =========== */
 
 /* =========== Blog Section styles =========== */
-.conteiner-blog-section {
-display: block;
-padding: 96px 0;
-}
 
 .contanier-blog {
 display: none;
@@ -456,10 +455,11 @@ display: none;
 }
 
 /* =========== Our Team Section styles =========== */
-
 .our-team-section {
+    padding-top: 96px;
+    padding-bottom: 96px;
     background-color: #F4F4FD;
-    }
+}
 
 .team-section {
     
@@ -537,10 +537,7 @@ display: none;
     fill: #f4f4fd;
 }
 
-.social-media-list {
-    width: 40px;
-    height: 40px;
-}
+
 .social-media-link {
     display: flex;
     flex-direction: row;
@@ -561,6 +558,11 @@ display: none;
 /* =========== /Our Team Section styles =========== */
 
 /* =========== Portfolio Section styles =========== */
+.portfolio-section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+
+}
 .portfolio-page {
     
     font-weight: 700;
@@ -685,7 +687,6 @@ display: none;
 /*=========== Footer Section styles===========*/
 
 .footer-page {
-    display: flex;
     background-color: #2e2f42;
     padding: 96px 0;
     
@@ -707,18 +708,18 @@ display: none;
     color: #f4f4fd;
     
 }
-@media screen and (max-width: 767px) {
+
 .footer-page-info {        
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
     max-width: 288px;
-    margin-bottom: 72px;
     text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
-}
-}
 @media screen and (min-width: 768px) {
     .footer-page-info {
         font-size: 16px;
@@ -726,16 +727,25 @@ display: none;
         letter-spacing: 0.02em;
         color: #f4f4fd;
         max-width: 264px;
-        margin-bottom: 72px;
         text-align: left;
     }
 }
+.container-footer-page {
+    display: flex;
+    
+    row-gap: 72px;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+}
+ 
+
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
     .container-footer-page {
-        display: flex;
-        align-items: baseline;
-        flex-wrap: wrap;
-        margin-left: 88px;
+    width: 584px;
+    display: flex;
+    flex-wrap: wrap;
+            
     }
 }
 
@@ -753,8 +763,10 @@ display: none;
     letter-spacing: 0.02em;
     color: #FFFFFF;
     margin-bottom: 16px;
+   
 
 }
+
 @media screen and (max-width: 767px) {
     .social-media-title {
         text-align: center;
@@ -762,21 +774,10 @@ display: none;
 }
 .footer-page-container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-}
-@media screen and (min-width: 768px) {
-    .footer-page-container {
-        text-align: start;
-        margin-right: 24px;
-    }
-}
-
-@media screen and (min-width: 1158px) {
-    .footer-page-container {
-        margin-right: 120px;
-    }
+    margin-bottom: 72px;
 }
 
 .social-media-menu {
@@ -817,18 +818,7 @@ display: none;
 .menu-portfolio-item:hover{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-.social-media {
-    margin-bottom: 72px;
-}
-@media screen and (min-width: 1158px) {
-    .social-media {
-        margin-right: 80px;
-    }
-}
-.footer-subscribe-text {
-    display: flex;
-    flex-direction: column;
-}
+
 
 .footer-subscribe-text {
     text-align: center;
@@ -837,18 +827,21 @@ display: none;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #fff;
+    display: flex;
+    flex-direction: column;
     margin-bottom: 16px;
     }
 
-@media screen and (min-width: 768px) and (max-width: 1157px) {
+@media screen and (min-width: 768px) {
     .footer-subscribe-text {
-        text-align: start;
+        text-align: left;
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #ffffff;
         margin-bottom: 16px;
+        
     }
 }
 
@@ -859,6 +852,7 @@ display: none;
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #fff;
+        text-align: left;
         margin-bottom: 16px;
     }
 }
@@ -866,6 +860,7 @@ display: none;
     display: flex;
     flex-direction: column;
     gap: 16px;
+    align-items: center;
 }
 @media screen and (min-width: 768px) {
     .subscribe-form {
@@ -895,7 +890,7 @@ display: none;
     border: none;
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    min-width: 165px;
+    max-width: 165px;
     height: 40px;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -909,9 +904,7 @@ display: none;
 .footer-subscribe-btn:focus {
     background-color: #404bbf;
 }
-.subscribe-label {
-    display: flex;
-}
+
 .footer-input {
     font-size: 12px;
     line-height: 2;
@@ -1197,24 +1190,11 @@ display: none;
 /* =========== /Rewiew form styles =========== */
 
 /* =========== Footer subscribe styles =========== */
-.footer-subscribe-text {
-    margin-bottom: 16px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #ffffff;
-}
+
 .footer-subscribe { 
     display: flex;
     flex-direction: column;
 }
-.subscribe-form {
-    display: flex;
-    gap: 24px;
-
-}
-
 .subscribe-label {
     display: flex;
 }
@@ -1226,7 +1206,7 @@ display: none;
     line-height: 2;
     letter-spacing: 0.04em;
     border-radius: 4px;
-    width: 264px;
+    max-width: 100%;
     height: 40px;
     padding-left: 16px;
     color: white;
@@ -1241,34 +1221,11 @@ display: none;
     outline: none
 }
 
-.footer-subscribe-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    background-color: #4D5AE5;
-    border: none;
-    border-radius: 4px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    min-width: 165px;
-    height: 40px;
-    cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .footer-subscribe-btn:hover,
 .footer-subscribe-btn:focus {
     background-color: #404BBF;
 }
 
-.icon-send {
-    margin-left: 16px;
-}
 /* =========== /Footer subscribe styles =========== */
 
 /* =========== Mobile menu styles =========== */
