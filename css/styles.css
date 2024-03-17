@@ -32,13 +32,13 @@ img {
 
 @media screen and (min-width: 768px) {
 .container {
-    min-width: 768px;
+    max-width: 768px;
           }
 }
 
 @media screen and (min-width:1158px) {
 .container {
-    min-width: 1158px;
+    max-width: 1158px;
     padding: 0 15px;
     }
 }
@@ -895,6 +895,7 @@ display: none;
     padding-left: 16px;
     padding-bottom: 8px;
     padding-top: 8px;
+    
 }
 @media screen and (min-width: 768px) {
     .footer-input {
@@ -905,10 +906,8 @@ display: none;
     color: #ffffff;
     font-size: 12px;
     line-height: 2;
-    letter-spacing: 0.04em;        
-    padding-left: 16px;
-    padding-bottom: 8px;
-    padding-top: 8px;
+    letter-spacing: 0.04em;      
+    
 }
 
 .icon-send {
